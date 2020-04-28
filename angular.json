@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "examwin-angular"
+    }
+  },
+  "defaultProject": "examwin-angular",
+  "cli": {
+    "analytics": false
+  }
 }
