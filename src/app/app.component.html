@@ -1,10 +1,33 @@
 <mat-toolbar color="primary">
-    <h1>
-      ExamWin
-    </h1>
-    <button mat-button routerLink="/">Home</button>
-    <button mat-button routerLink="/">Study Materials</button>
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon >menu</mat-icon>
+    </button>
+    <h1>ExamWin</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/accounts'"> Home </a>
+      <a mat-button [routerLink]="'/create-account'"> Dashboard </a>
+      <a mat-button [routerLink]="'/contacts'"> My Class </a>
+      <a mat-button [routerLink]="'/create-contact'"> Study Stuff </a>
+      <a mat-button [routerLink]="'/activities'"> Activities </a>
+    </div>
+    <li>
+      <button mat-icon-button [matMenuTriggerFor]="auth">
+        <mat-icon>language</mat-icon>
+        <span>Language</span>
+      </button>
+      <mat-menu #auth="matMenu">
+        <button mat-menu-item >
+          <mat-icon>english</mat-icon>
+          <span>English</span>
+        </button>
+        <button mat-menu-item >
+          <mat-icon>english</mat-icon>
+          <span>Sinhala</span>
+        </button>
+      </mat-menu>
+    </li>
     
-  </mat-toolbar>
-  <app-home></app-home>
-  <router-outlet></router-outlet>
+  </mat-toolbar-row>
+</mat-toolbar>

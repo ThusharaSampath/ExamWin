@@ -10,7 +10,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HomeComponent } from './home/home.component';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +21,18 @@ import { HomeComponent } from './home/home.component';
 
   ],
   imports: [
-    BrowserModule,
+    MatSidenavModule,
+    MatListModule,
+    BrowserModule, 
+    MatMenuModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
