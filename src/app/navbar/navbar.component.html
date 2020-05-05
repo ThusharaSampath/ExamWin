@@ -29,7 +29,7 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="material-icons" style="color: black; font-size: 36px;">
+      <span class="material-icons" style="color: rgb(0, 211, 193); font-size: 36px;">
         menu_book
       </span>
       <span class="logo">Exam-Win</span>
@@ -43,12 +43,12 @@
       </div>
       <span class="spacer"></span>
       <span class="notification" >
-        <mat-menu #appMenu="matMenu" id="masseges">
+        <mat-menu #appMenu1="matMenu" id="masseges">
           <button mat-menu-item>Massege 1</button>
           <button mat-menu-item>Massege 2</button>
         </mat-menu>
 
-        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <button mat-icon-button [matMenuTriggerFor]="appMenu1">
           <span class="material-icons">
             notifications
           </span>
@@ -56,18 +56,16 @@
         </button>
       </span>
       <span class="profile">
-        <mat-menu #appMenu="matMenu">
+        <mat-menu #appMenu2="matMenu">
           <button mat-menu-item>Settings</button>
           <button mat-menu-item>Help</button>
           <button mat-menu-item>Contact Us</button>
           <button mat-menu-item>Logout</button>
         </mat-menu>
-
-        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <button mat-icon-button [matMenuTriggerFor]="appMenu2">
           <span class="material-icons">
             account_circle
-          </span>
-         
+          </span>     
         </button>
       </span>
     </mat-toolbar>

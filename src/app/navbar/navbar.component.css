@@ -40,7 +40,7 @@ mat-toolbar a {
   padding: auto;
 }
 .logo{
-  font-size: larger; font-style: italic; color: black; font-weight: bold;
+  font-size: larger; font-style: italic; color: rgb(5, 255, 234); font-weight: bold;
 }
 .profile{
   margin: 0 10px;
