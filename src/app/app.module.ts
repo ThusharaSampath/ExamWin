@@ -14,10 +14,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NavbarComponent,
 
   ],
   imports: [
@@ -32,7 +35,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatButtonModule,
     MatCardModule,
     MatProgressBarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
