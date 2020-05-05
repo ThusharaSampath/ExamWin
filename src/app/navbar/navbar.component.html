@@ -1,13 +1,21 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#"><span class="material-icons">home</span>Home</a>
+      <a mat-list-item href="#"
+        ><span class="material-icons">school</span>My Classes</a
+      >
+      <a mat-list-item href="#"
+        ><span class="material-icons">library_books</span>Materials</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -17,11 +25,54 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="isHandset$ | async"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>examwin-angular</span>
+      <span class="material-icons" style="color: black; font-size: 36px;">
+        menu_book
+      </span>
+      <span class="logo">Exam-Win</span>
+
+      <div class="toolbarItems">
+        <a href="#"><span class="material-icons">home</span>Home</a>
+        <a href="#"><span class="material-icons">school</span>My Classes</a>
+        <a href="#"
+          ><span class="material-icons">library_books</span>Materials</a
+        >
+      </div>
+      <span class="spacer"></span>
+      <span class="notification" >
+        <mat-menu #appMenu="matMenu" id="masseges">
+          <button mat-menu-item>Massege 1</button>
+          <button mat-menu-item>Massege 2</button>
+        </mat-menu>
+
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <span class="material-icons">
+            notifications
+          </span>
+          
+        </button>
+      </span>
+      <span class="profile">
+        <mat-menu #appMenu="matMenu">
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>Help</button>
+          <button mat-menu-item>Contact Us</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <span class="material-icons">
+            account_circle
+          </span>
+         
+        </button>
+      </span>
     </mat-toolbar>
     <!-- Add Content Here -->
+
+    <ng-content id="content"></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

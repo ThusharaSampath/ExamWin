@@ -15,3 +15,36 @@
   top: 0;
   z-index: 1;
 }
+
+@media (min-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  mat-toolbar .toolbarItems {
+    display: none;
+  }
+}
+mat-toolbar  .spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar .toolbarItems {
+  margin-left: 10px;
+}
+mat-toolbar a {
+  display: inline-block;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  padding: auto;
+}
+.logo{
+  font-size: larger; font-style: italic; color: black; font-weight: bold;
+}
+.profile{
+  margin: 0 10px;
+}
+.notification{
+  margin: 0 10px;
+}
